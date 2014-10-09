@@ -45,14 +45,18 @@ public class Runner
 		Collections.sort(listOfStudents, new NameSorter());
 		Collections.sort(listOfStudents, new GroupSorter());
 		
-	
-
-		for (Student i : listOfStudents)
-			{
-			System.out.println("Group " + numberOfGroups + listOfStudents);
+		
+		for (int i=1; i<numberOfGroups+1; i++)
+			{ 
+			System.out.println("Group " + i);
+			for (int j=0; j<listOfStudents.size(); j++)
+				{
+				if (listOfStudents.get(j).getGroup()==i)
+					{
+					System.out.println(listOfStudents.get(j).getFirstName() + " " + listOfStudents.get(j).getLastName());
+					}
+				}
+			System.out.println();
 			}
-		
-		
 		}
-
 	}
